@@ -1,0 +1,67 @@
+.sidebar{
+    background: linear-gradient(to right, #4A00E0, #8E2DE2);
+    height: 100vh;
+}
+.sidebar .sidebar-brand{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 800;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .05rem;
+    z-index: 1;
+    border-bottom: 1px solid #fff;
+}
+
+.sidebar .sidebar-link{
+    color: #fff;
+    text-decoration: none;
+    z-index: 1;
+    transition: .2s;
+}
+.sidebar .sidebar-link:hover{
+    color: #fffc;
+    text-decoration: none;
+    z-index: 1;
+}
+
+.content nav{
+    box-shadow: 0 10px 30px 0 #92929247;
+}
+
+.user-link{
+    border-left: 1px solid #e3e6f0;
+    margin-left: 10px;
+    padding-left: 5px;
+}
+
+.user-name{
+    color: #8E2DE2 !important;
+}
+
+/* main */
+
+.main{
+    height: 90vh;
+    overflow-y: scroll;
+}
+.main::-webkit-scrollbar {
+    width: 0px;
+}
+.main .title{
+    margin: 10px;
+}
+.main .title h5{
+    color: #5a5c69;
+    padding: 1.5rem 1rem;
+    font-size: 1.75rem;
+    border-bottom: 1px solid #9993
+}
+
+.display-cards{
+    box-shadow: 0 10px 30px 0 #92929247;
+    border-radius: 5%;
+    border-left: .25rem solid #4A00E0!important;
+}
