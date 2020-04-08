@@ -1,0 +1,111 @@
+#sidebar {
+  height: 100vh;
+  padding: 0px;
+  font-size: 15px;
+}
+#sidebar-ul {
+  overflow-y: scroll;
+  height: 500px;
+  width: 100%;
+  background-color: #f8f9fa !important;
+}
+
+#sidebar-ul::-webkit-scrollbar {
+  width: 0px;
+}
+
+#page-content {
+  height: initial;
+}
+
+#main_window{
+  height: 100%;
+  width: 100%;
+}
+
+#main_html{
+  height: 100%;
+}
+
+#main_body{
+  min-height: 100%;
+}
+
+#main_div {
+  overflow-wrap: break-word;
+  outline: none !important;
+  cursor: pointer;
+  height: 100vh;
+  width: 100%;
+}
+
+.element_section {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+}
+
+.element_section > .card {
+  margin: 5px;
+  cursor: grab;
+}
+.collapse-button {
+  text-decoration: none;
+  color: #000;
+  background: #fff;
+}
+.collapse-card {
+  background: #fff;
+}
+.collapse-button:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+.float_toolbar {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 1;
+}
+.btn-toolbar {
+  padding: 15px 11px;
+  color: white;
+}
+
+/* Borders */
+
+.top-border {
+  border-top: 10px solid #9999;
+  border-bottom: none;
+}
+
+.top-border {
+  border-bottom: 10px solid #9999;
+  border-top: none;
+}
+
+/* Outlines */
+.selected-outline {
+  outline: 2px dashed blue;
+}
+/* Cursors */
+.cursor-pointer {
+  cursor: pointer;
+}
+.cursor-default {
+  cursor: default;
+}
+
+.cursor-grabing {
+  cursor: grabbing;
+}
+.cursor-move {
+  cursor: move;
+}
+
+/* Css Editor */
+#cusomCssInput{
+  font-family: Consolas, "Courier New", monospace;
+  /* overflow-y: scroll;
+  word-wrap: break-word; */
+}

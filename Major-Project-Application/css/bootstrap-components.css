@@ -1,0 +1,13 @@
+.main-header {
+  height: 500px;
+  width: 100%;
+  background-image: url('../images/headerBG.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+.height-500 {
+  height: 500px;
+}

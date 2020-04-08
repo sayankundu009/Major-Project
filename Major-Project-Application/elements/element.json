@@ -1,0 +1,98 @@
+{
+        "h1":{
+            "heading":"Heading",
+            "tag":"h1",
+            "html":"<h1>Heading</h1>",
+            "image":"./images/icons/heading.svg"
+        },
+
+        "p":{
+            "heading":"Text",
+            "tag":"p",
+            "html":"<p>Text</p>",
+            "image":"./images/icons/paragraph.svg"
+        },
+
+        "jumbotron":{
+            "heading":"Jumbotron",
+            "tag":"jumbotron",
+            "html":"<div class=\"jumbotron m-0\">\r\n                    <h1 class=\"display-4\" id=\"h1\">Hello, world!<\/h1>\r\n                    <p class=\"lead\" >This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.<\/p>\r\n                    <p class=\"lead\" >\r\n                    <button  class=\"btn btn-primary btn-lg\" role=\"button\">Learn more<\/button>\r\n                    <\/p>\r\n                <\/div>",
+            "image":"./images/icons/jumbotron.svg"
+        },
+
+        "navbar":{
+            "heading":"Navbar",
+            "tag":"navbar",
+            "html":"<nav class=\"navbar navbar-expand-sm navbar-light\">\r\n    <a class=\"navbar-brand\" href=\"javascript:void(0)\">Brand<\/a>\r\n    <div class=\"collapse navbar-collapse\" id=\"navbarColor01\">\r\n      <ul class=\"navbar-nav mr-auto\">\r\n        <li class=\"nav-item active\">\r\n          <a class=\"nav-link\" href=\"javascript:void(0)\">Home<\/a>\r\n        <\/li>\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link\" href=\"javascript:void(0)\">About<\/a>\r\n        <\/li>\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link\" href=\"javascript:void(0)\">Contact<\/a>\r\n        <\/li>\r\n      <\/ul>\r\n      <form class=\"form-inline\">\r\n        <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\" >\r\n        <button class=\"btn btn-outline-info my-2 my-sm-0\" type=\"button\">Search<\/button>\r\n      <\/form>\r\n    <\/div>\r\n  <\/nav>",
+            "image":"./images/icons/navbar.svg"
+        },
+
+        "header":{
+            "heading":"Header",
+            "tag":"header",
+            "html":"<header class=\"main-header\">\r\n                        <div class=\"container h-100\">\r\n                        <div class=\"row h-100 align-items-center\">\r\n                            <div class=\"col-12 text-center\">\r\n                            <h1 class=\"font-weight-light\">Vertically Centered Masthead Content<\/h1>\r\n                            <p class=\"lead\">A great starter layout for a landing page<\/p>\r\n                            <\/div>\r\n                        <\/div>\r\n                        <\/div>\r\n                <\/header>",
+            "image":"./images/icons/header.png"
+       
+        },
+
+        "button":{
+            "heading":"Button",
+            "tag":"button",
+            "html":"<button type=\"button\" class=\"btn\">Click me<\/button>",
+            "image":"./images/icons/button.svg"
+        },
+
+        "card":{
+            "heading":"Card",
+            "tag":"card",
+            "html":"<div class=\"card\" style=\"width: 18rem;\">\r\n            <img class=\"card-img-top\" src=\"https:\/\/via.placeholder.com\/286x180\" alt=\"Card image cap\">\r\n            <div class=\"card-body\">\r\n            <h5 class=\"card-title\">Card title<\/h5>\r\n            <p class=\"card-text\">Some quick example text to build on the card title and make up the bulk of the card's content.<\/p>\r\n            <a href=\"#\" class=\"btn btn-primary\">Go somewhere<\/a>\r\n            <\/div>\r\n        <\/div>",
+            "image":"./images/icons/panel.svg"
+        },
+        "container":{
+            "heading":"Container",
+            "tag":"container",
+            "html":"<div class=\"container\"><div>Container<\/div><\/div>",
+            "image":"./images/icons/container.svg"
+        },
+        "col2":{
+            "heading":"Column 2",
+            "tag":"column2",
+            "html":" <div class=\"container-fluid\">\r\n      <div class=\"row\">\r\n          <div class=\"col-6 bg-grey\">\r\n            <p class=\"lead\">\r\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum rerum libero, harum omnis mollitia obcaecati dolore vitae consequuntur veniam cupiditate error ullam maiores quam impedit et! Dolores maxime laborum sunt!\r\n            <\/p>\r\n          <\/div>\r\n          <div class=\"col-6 bg-grey\">\r\n            <p class=\"lead\">\r\n              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum rerum libero, harum omnis mollitia obcaecati dolore vitae consequuntur veniam cupiditate error ullam maiores quam impedit et! Dolores maxime laborum sunt!\r\n            <\/p>\r\n          <\/div>\r\n      <\/div>\r\n    <\/div>",
+            "image":"./images/icons/grid_row.svg"
+            
+        },
+        "img":{
+            "heading":"Image",
+            "tag":"img",
+            "html":" <img src=\"..\/images\/icons\/image.svg\" alt=\"\">",
+            "image":"./images/icons/image.svg"
+        },
+        "form":{
+            "heading":"Form",
+            "tag":"form",
+            "html":"<form><div class=\"form-group\"><label>Text<\/label><input type=\"text\" class=\"form-control\"><\/div><\/form>",
+            "image":"./images/icons/form.svg"
+        },
+        
+        "textInput":{
+            "heading":"Text Input",
+            "tag":"textInput",
+            "html":"<div class=\"form-group\"><label>Text<\/label><input type=\"text\" class=\"form-control\"><\/div>",
+            "image":"./images/icons/text_input.svg"
+        },
+
+        "textareaInput":{
+            "heading":"Textarea Input",
+            "tag":"textareaInput",
+            "html":"<div class=\"form-group\"><label>Message<\/label><textarea class=\"form-control\"><\/textarea><\/div>",
+            "image":"./images/icons/text_area.svg"
+        },
+
+        "selectInput":{
+            "heading":"Select Input",
+            "tag":"selectInput",
+            "html":"<div class=\"form-group\"><label>Select<\/label><select class=\"form-control\"><option value=\"\">Choose an option<\/option><option value=\"value2\">Text 2<\/option><option value=\"value3\">Text 3<\/option><\/select><\/div>",
+            "image":"./images/icons/select_input.svg"
+        }
+
+}

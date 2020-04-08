@@ -1,0 +1,8 @@
+{
+  "name": "builder.io",
+  "version": "1.0.0",
+  "description": "Page Builder Web App",
+  "main": "index.html",
+  "author": "Sayan Kundu",
+  "license": "MIT"
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="capture"> 
+    <div  style="padding: 10px; background: #f5da55">
+        <h4 style="color: #000; ">Hello world!</h4>
+    </div>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+    <script>
+        html2canvas(document.querySelector("#capture")).then(canvas => {
+            document.body.appendChild(canvas)
+            var img    = canvas.toDataURL("image/png");
+
+            // window.location = img;
+
+            console.log(img);
+
+            var image = document.createElement('img'); 
+            image.src = img;
+
+            document.body.innerHTML = "";
+            document.body.innerText = img;
+
+            // window.location.replace(document.body.innerText.replace("data:",""));
+        });
+    </script>
+</body>
+</html>

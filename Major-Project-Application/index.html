@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Builder</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/bootstrap-components.css" />
+</head>
+
+<body>
+  <style id="main_stylesheet"></style>
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="customCssModal" tabindex="-1" role="dialog" aria-labelledby="customCssModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="customCssModalLabel">Add Custom Css</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" style="height: 350px;">
+          <!-- <textarea name="cusomCssInput" id="cusomCssInput" class="form-control"
+            style="width: 100%; height: 100%;"></textarea> -->
+
+          <div id="cusomCssInput" class="form-control"
+          style="width: 100%; height: 100%;" contenteditable="true"></div>  
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" id="cusomCssInputCloseBtn">Close</button>
+          <button type="button" class="btn btn-primary" id="cusomCssInputSaveBtn">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="btn-group-vertical float_toolbar" role="group" id="toolbar">
+    <button type="button" class="btn btn-info  rounded-circle mb-1" id="toolbar_up"><i
+        class="fas fa-arrow-up btn-toolbar"></i></button>
+    <button type="button" class="btn btn-info rounded-circle mb-1" id="toolbar_down"><i
+        class="fas fa-arrow-down btn-toolbar"></i></button>
+    <button type="button" class="btn btn-danger  rounded-circle mb-1" id="toolbar_delete"><i
+        class="fas fa-trash-alt btn-toolbar"></i></button>
+  </div>
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark shadow position-fixed" style="z-index: 1; width: 100%;">
+    <a class="navbar-brand" href="javascript:void(0)">Builder</a>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="javascript:void(0)">Home</a>
+        </li>
+      </ul>
+      <button class="btn btn-info m-1">Save</button>
+
+      <button class="btn btn-info m-1" onclick="PreviewPage()">Preview</button>
+
+      <button class="btn btn-grey m-1" data-toggle="modal" data-target="#customCssModal" id="addCssBtn">
+        <i class="fas fa-plus"></i> Add Css
+      </button>
+
+    </div>
+  </nav>
+  <!-- wrapper -->
+  <div class="d-flex" style="padding-top: 56px;" id="wrapper">
+    <!-- Sidebar -->
+    <div class="bg-light border-right col-md-2" id="sidebar">
+      <div class="col-12 p-0">
+        <div class="col-md-12 p-0">
+          <ul class="nav nav-tabs pt-3 " id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="element-tab-btn" data-toggle="tab" href="#element_content" role="tab"
+                aria-controls="home" aria-selected="true">Elements</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="customize-tab-btn" data-toggle="tab" href="#customize" role="tab"
+                aria-controls="customize" aria-selected="false">Styles</a>
+            </li>
+          </ul>
+          <div class="list-group list-group-flush" id="sidebar-ul">
+            <div class="tab-content mt-3" id="myTabContent">
+              <div class="tab-pane show active" id="element_content" role="tabpanel" aria-labelledby="element-tab">
+                <div class="element_section">
+
+                  <!-- This is where elements will go -->
+
+                </div>
+              </div>
+              <div class="tab-pane" id="customize" role="tabpanel" aria-labelledby="customize-tab">
+                <div>
+                  <h4 class="text-center" id="selected_item_name"></h4>
+                </div>
+                <hr />
+                <!-- general tab -->
+                <div id="accordion" role="tablist" aria-multiselectable="true">
+                  <div class="card">
+                    <a class="collapse-button" data-toggle="collapse" data-parent="#accordion" href="#collapse-general"
+                      aria-expanded="true" aria-controls="collapse-general">
+                      <div class="card-header" role="tab" id="headingOne">
+                        General
+                      </div>
+                    </a>
+
+                    <div id="collapse-general" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                      <div class="card-body" id="custom_option_accordion">
+
+                    
+                  
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- general tab -->
+                <hr />
+
+                <!-- display tab -->
+                <div id="accordion" role="tablist" aria-multiselectable="true">
+                  <div class="card">
+                    <a class="collapse-button" data-toggle="collapse" data-parent="#accordion" href="#collapse-display"
+                      aria-expanded="true" aria-controls="collapse-display">
+                      <div class="card-header" role="tab" id="headingOne">
+                        Display
+                      </div>
+                    </a>
+
+                    <div id="collapse-display" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                      <div class="card-body">
+                        <div class="form-group">
+                          <label>Width</label>
+                          <input type="text" name="" id="form-width" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                          <label>Height</label>
+                          <input type="text" name="" id="form-height" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                          <label>Float</label>
+                          <select name="" id="form-float" class="form-control">
+                            <option value="">None</option>
+                            <option value="float-left">Left</option>
+                            <option value="float-left">right</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- display tab -->
+                <!-- <hr /> -->
+                <!-- Content tab -->
+                <!-- <div id="accordion" role="tablist" aria-multiselectable="true">
+                  <div class="card">
+                    <a class="collapse-button" data-toggle="collapse" data-parent="#accordion" href="#collapse-content"
+                      aria-expanded="true" aria-controls="collapse-content">
+                      <div class="card-header" role="tab" id="headingOne">
+                        Content
+                      </div>
+                    </a>
+
+                    <div id="collapse-content" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                      <div class="card-body">
+                        <div class="form-group">
+                          <label>Edit text</label>
+                          <input type="text" name="" id="form-text" class="form-control" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+                <!-- Content tab -->
+                <hr />
+                <!-- Typography tab -->
+                <div id="accordion" role="tablist" aria-multiselectable="true">
+                  <div class="card">
+                    <a class="collapse-button" data-toggle="collapse" data-parent="#accordion"
+                      href="#collapse-typography" aria-expanded="true" aria-controls="collapse-typography">
+                      <div class="card-header" role="tab" id="headingOne">
+                        Typography
+                      </div>
+                    </a>
+
+                    <div id="collapse-typography" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                      <div class="card-body">
+                        <div class="form-group">
+                          <label>Alignment</label>
+                          <select name="" id="form-alignment" class="form-control">
+                            <option value="text-left">Left</option>
+                            <option value="text-center">Center</option>
+                            <option value="text-right">right</option>
+                          </select>
+                        </div>
+
+                        <div class="form-group">
+                          <label>Font Size</label>
+                          <input type="number" name="" id="form-fontSize" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                          <label>Font Weight</label>
+                          <select name="" id="form-font-weight" class="form-control">
+                            <option value="">Default</option>
+                            <option value="100">Thin</option>
+                            <option value="200">Extra-Light</option>
+                            <option value="300">Light</option>
+                            <option value="400">Normal</option>
+                            <option value="500">Medium</option>
+                            <option value="600">Semi-Bold</option>
+                            <option value="700">Bold</option>
+                            <option value="800">Extra-Bold</option>
+                            <option value="900">Ultra-Bold</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Typography tab -->
+
+                <hr />
+                <!-- Color tab -->
+                <div id="accordion" role="tablist" aria-multiselectable="true">
+                  <div class="card">
+                    <a class="collapse-button" data-toggle="collapse" data-parent="#accordion" href="#collapse-color"
+                      aria-expanded="true" aria-controls="collapse-color">
+                      <div class="card-header" role="tab" id="headingOne">
+                        Colors
+                      </div>
+                    </a>
+
+                    <div id="collapse-color" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                      <div class="card-body">
+                        <div class="form-group">
+                          <label>Font Color</label>
+                          <input type="color" name="" id="form-Color" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                          <label>Background Color</label>
+                          <input type="color" name="" id="form-BackgroundColor" class="form-control" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Color tab -->
+
+                <hr />
+                <!-- margin tab -->
+                <div id="accordion" role="tablist" aria-multiselectable="true">
+                  <div class="card">
+                    <a class="collapse-button" data-toggle="collapse" data-parent="#accordion" href="#collapse-margin"
+                      aria-expanded="true" aria-controls="collapse-margin">
+                      <div class="card-header" role="tab" id="headingOne">
+                        Margin
+                      </div>
+                    </a>
+
+                    <div id="collapse-margin" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                      <div class="card-body">
+                        <div class="form-group">
+                          <label>Top</label>
+                          <div class="input-group mb-3">
+                            <input type="number" class="form-control form-control-sm" id="form-margintop" />
+                            <div class="input-group-append">
+                              <span class="input-group-text">
+                                <select name="" id="form-margintop-unit" class="form-control form-control-sm">
+                                  <option value="px">px</option>
+                                  <option value="%">%</option>
+                                </select>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <!--  -->
+                        <div class="form-group">
+                          <label>Buttom</label>
+                          <div class="input-group mb-3">
+                            <input type="number" class="form-control form-control-sm" id="form-marginbottom" />
+                            <div class="input-group-append">
+                              <span class="input-group-text">
+                                <select name="" id="form-marginbottom-unit" class="form-control form-control-sm">
+                                  <option value="px">px</option>
+                                  <option value="%">%</option>
+                                </select>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <!--  -->
+                        <div class="form-group">
+                          <label>Left</label>
+                          <div class="input-group mb-3">
+                            <input type="number" class="form-control form-control-sm" id="form-marginleft" />
+                            <div class="input-group-append">
+                              <span class="input-group-text">
+                                <select name="" id="form-marginleft-unit" class="form-control form-control-sm">
+                                  <option value="px">px</option>
+                                  <option value="%">%</option>
+                                </select>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <!--  -->
+                        <div class="form-group">
+                          <label>Right</label>
+                          <div class="input-group mb-3">
+                            <input type="number" class="form-control form-control-sm" id="form-marginright" />
+                            <div class="input-group-append">
+                              <span class="input-group-text">
+                                <select name="" id="form-marginright-unit" class="form-control form-control-sm">
+                                  <option value="px">px</option>
+                                  <option value="%">%</option>
+                                </select>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- margin tab -->
+
+                <hr />
+                <!-- Padding tab -->
+                <div id="accordion" role="tablist" aria-multiselectable="true">
+                  <div class="card">
+                    <a class="collapse-button" data-toggle="collapse" data-parent="#accordion" href="#collapse-padding"
+                      aria-expanded="true" aria-controls="collapse-padding">
+                      <div class="card-header" role="tab" id="headingOne">
+                        Padding
+                      </div>
+                    </a>
+
+                    <div id="collapse-padding" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                      <div class="card-body">
+                        <div class="form-group">
+                          <label>Top</label>
+                          <div class="input-group mb-3">
+                            <input type="number" class="form-control form-control-sm" id="form-paddingtop" />
+                            <div class="input-group-append">
+                              <span class="input-group-text">
+                                <select name="" id="form-paddingtop-unit" class="form-control form-control-sm">
+                                  <option value="px">px</option>
+                                  <option value="%">%</option>
+                                </select>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <!--  -->
+                        <div class="form-group">
+                          <label>Buttom</label>
+                          <div class="input-group mb-3">
+                            <input type="number" class="form-control form-control-sm" id="form-paddingbottom" />
+                            <div class="input-group-append">
+                              <span class="input-group-text">
+                                <select name="" id="form-paddingbottom-unit" class="form-control form-control-sm">
+                                  <option value="px">px</option>
+                                  <option value="%">%</option>
+                                </select>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <!--  -->
+                        <div class="form-group">
+                          <label>Left</label>
+                          <div class="input-group mb-3">
+                            <input type="number" class="form-control form-control-sm" id="form-paddingleft" />
+                            <div class="input-group-append">
+                              <span class="input-group-text">
+                                <select name="" id="form-paddingleft-unit" class="form-control form-control-sm">
+                                  <option value="px">px</option>
+                                  <option value="%">%</option>
+                                </select>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <!--  -->
+                        <div class="form-group">
+                          <label>Right</label>
+                          <div class="input-group mb-3">
+                            <input type="number" class="form-control form-control-sm" id="form-paddingright" />
+                            <div class="input-group-append">
+                              <span class="input-group-text">
+                                <select name="" id="form-paddingright-unit" class="form-control form-control-sm">
+                                  <option value="px">px</option>
+                                  <option value="%">%</option>
+                                </select>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Padding tab -->
+
+                <hr />
+                <!-- Background image  tab -->
+                <div id="accordion" role="tablist" aria-multiselectable="true">
+                  <div class="card">
+                    <a class="collapse-button" data-toggle="collapse" data-parent="#accordion"
+                      href="#collapse-background-image" aria-expanded="true" aria-controls="collapse-background-image">
+                      <div class="card-header" role="tab" id="headingOne">
+                        Background Image
+                      </div>
+                    </a>
+
+                    <div id="collapse-background-image" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                      <div class="card-body">
+                        <div class="form-group">
+                          <label>Image Url</label>
+                          <input type="url" name="" id="form-background-image-url" class="form-control" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Background image -->
+
+                <br />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Sidebar -->
+
+    <!-- Page Content -->
+    <div id="page-content" class="col-md-10 bg-dark" style="padding: 15px; padding-top: 0px;">
+      <!-- <div class="bg-light" ondragover="onDragOver(event);" ondrop="onDrop(event);" ondragenter="onDragEnter(event)"
+        ondragleave="onDragLeave(event)" id="main_div"></div> -->
+
+      
+        <iframe src="pages/page.html" frameborder="0" id="main_window"></iframe>
+  
+    </div>
+    <!-- Page Content -->
+  </div>
+
+  <!-- wrapper -->
+
+
+  <script src="js/bootstrap-native.min.js"></script>
+  <!-- <script src="js/bootstrap-components.js"></script> -->
+  <script src="js/fontawesome.js"></script>
+  <script src="js/ace/ace.js"></script>
+  <script src="js/builder.js"></script>
+
+</body>
+
+</html>

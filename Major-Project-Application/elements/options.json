@@ -1,0 +1,103 @@
+{
+    "h1":{
+        "content":{
+                "eventlistner":"input",
+                "valueName": "innerText",
+                "formElement": "INPUT",
+                "formType": "text",
+                "lable":"Edit Text"
+        }
+    },
+    "h2":{
+        "content":{
+                "eventlistner":"input",
+                "valueName": "innerText",
+                "formElement": "INPUT",
+                "formType": "text",
+                "lable":"Edit Text"
+        }
+    },
+    "h3":{
+        "content":{
+                "eventlistner":"input",
+                "valueName": "innerText",
+                "formElement": "INPUT",
+                "formType": "text",
+                "lable":"Edit Text"
+        }
+    },
+    "h4":{
+        "content":{
+                "eventlistner":"input",
+                "valueName": "innerText",
+                "formElement": "INPUT",
+                "formType": "text",
+                "lable":"Edit Text"
+        }
+    },
+    "h5":{
+        "content":{
+                "eventlistner":"input",
+                "valueName": "innerText",
+                "formElement": "INPUT",
+                "formType": "text",
+                "lable":"Edit Text"
+        }
+    },
+    "h6":{
+        "content":{
+                "eventlistner":"input",
+                "valueName": "innerText",
+                "formElement": "INPUT",
+                "formType": "text",
+                "lable":"Edit Text"
+        }
+    },
+    "p":{
+        "content":{
+                "eventlistner":"input",
+                "valueName": "innerText",
+                "formElement": "INPUT",
+                "formType": "text",
+                "lable":"Edit Text"
+                
+        }
+    },
+    "button":{
+        "content":{
+                "eventlistner":"input",
+                "valueName": "innerText",
+                "formElement": "INPUT",
+                "formType": "text",
+                "lable":"Edit Text"
+        }
+    },
+    "label":{
+        "content":{
+                "eventlistner":"input",
+                "valueName": "innerText",
+                "formElement": "INPUT",
+                "formType": "text",
+                "lable":"Edit Text"
+        }
+    },
+    "a":{
+        "content":{
+            "eventlistner":"input",
+            "valueName": "innerText",
+            "formElement": "INPUT",
+            "formType": "text",
+            "lable":"Edit Text"
+        }
+    },
+    "img":{
+        "imgsource":{
+                "eventlistner":"focusout",
+                "valueName": "src",
+                "formElement": "INPUT",
+                "formType": "text",
+                "lable":"Image Source"
+        }
+    }
+
+}
